@@ -1,0 +1,12 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{recipe.name}}</mat-card-title>
+        <mat-card-subtitle>
+            Link to recipe
+            <a mat-icon-button [href]="recipe.link"><mat-icon>link</mat-icon></a>
+        </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <li *ngFor="let el of recipe.ingredients">{{el}}</li>
+    </mat-card-content>
+</mat-card>

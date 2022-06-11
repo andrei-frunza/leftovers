@@ -1,0 +1,22 @@
+mat-card{
+    margin:15px;
+    min-width: 250px;
+    background-color:  rgba(74, 106, 194, 0.205);
+}
+mat-card-header{
+    border-radius: 6px;
+    background-color: rgba(74, 106, 194, 0.233);
+}
+mat-card-content{
+    background-color: rgb(255, 255, 255);
+    border-radius: 6px;
+}
+mat-card-title{
+    margin:5px;
+}
+mat-card-subtitle{
+    color:black
+}
+li{
+    margin:5px
+}

@@ -1,0 +1,9 @@
+<mat-card>
+        <mat-card-header>
+            <mat-card-title>{{rec.recipe.label}}</mat-card-title>
+            <mat-card-subtitle>Link to recipe <a mat-icon-button [href]="rec.recipe.shareAs"><mat-icon>link</mat-icon></a></mat-card-subtitle>    
+        </mat-card-header>
+        <mat-card-content>
+            <img [src]="rec.recipe.images.SMALL.url">
+        </mat-card-content>
+</mat-card>

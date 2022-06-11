@@ -1,0 +1,47 @@
+<div class="whole">
+<mat-card class="searchBar">
+    
+      <mat-card-title>What do we have leftover?</mat-card-title>
+      <mat-card-subtitle>Search your ingredients and get recipes</mat-card-subtitle>
+    
+    
+    <mat-card-content>
+      <mat-form-field class="form" appearance="outline" >
+        <mat-label>Ingredient</mat-label>
+        <input
+        autocomplete="off" 
+        matInput
+        #input
+        placeholder="ex:chicken..."
+        [formControl]="item"
+        (submit)="add()"
+        (keyup.enter)="add()"
+        >
+      </mat-form-field>
+      <mat-chip-list>
+        <mat-chip *ngFor="let string of ingredients">
+          {{string}}
+          <button mat-icon-button (click)="remove(string)">
+            <mat-icon>cancel</mat-icon>
+          </button>
+        </mat-chip>
+      </mat-chip-list>
+    </mat-card-content>
+    <mat-card-actions>
+      <button *ngIf="ingredients.length>0" mat-raised-button color="primary" (click)="searchWeb()">Seach the Internet<mat-icon>search</mat-icon></button>
+      <button *ngIf="ingredients.length==0" mat-raised-button color="primary" (click)="random()">Give me Random Recipes<mat-icon>update</mat-icon></button>
+    </mat-card-actions>
+  </mat-card>
+  <mat-tab-group>
+  <mat-tab label="Search the Internet">
+    <div class="card-container">
+      <app-api-card *ngFor="let el of recAPI" [rec]="el"></app-api-card>
+    </div>
+  </mat-tab>
+    <mat-tab label="Local Database" >
+      <div class="card-container" fxLayout.xs="column">
+        <app-card *ngFor="let recipe of recFiltered" [recipe]="recipe"></app-card>
+      </div>
+  </mat-tab>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,36 @@
+
+.form{
+    width:100%;
+}
+.card-container{
+    display:flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    background-color:white;
+}
+.tabs{
+    background-color: rgb(74, 106, 194);
+    color: rgb(255, 255, 255);
+}
+.searchBar{
+    background-color: rgba(74, 106, 194, 0.233);
+}
+.BLACK{
+    color: black;
+}
+mat-form-field{
+    background-color: white;
+    border-radius: 5px;
+    border-color: black;
+    border-style:double
+}
+mat-chip{
+    color:rgb(240, 85, 28);
+}
+.mat-tab-labels{
+    background-color: rgb(74, 106, 194);
+    
+}
+.mat-tab-label-content{
+    color: white
+}
