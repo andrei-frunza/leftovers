@@ -28,8 +28,7 @@
       </mat-chip-list>
     </mat-card-content>
     <mat-card-actions>
-      <button *ngIf="ingredients.length>0" mat-raised-button color="primary" (click)="searchWeb()">Seach the Internet<mat-icon>search</mat-icon></button>
-      <button *ngIf="ingredients.length==0" mat-raised-button color="primary" (click)="random()">Give me Random Recipes<mat-icon>update</mat-icon></button>
+      <button *ngIf="ingredients.length==0" mat-raised-button color="primary" (click)="searchWeb()">Give me different recipes<mat-icon>update</mat-icon></button>
     </mat-card-actions>
   </mat-card>
   <mat-tab-group>

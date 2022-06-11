@@ -51,6 +51,7 @@ export class SearchComponent implements OnInit {
     for (let i=0;i<this.ingredients.length;i++){
       this.recFiltered=this.recFiltered.filter(el=>el.ingredients.includes(this.ingredients[i]))
     }
+    this.searchWeb();
     
   }
   remove(input:String){
@@ -62,13 +63,11 @@ export class SearchComponent implements OnInit {
     }
   } else {
     this.recFiltered=this.recipes;
-  }}
+  }
+  this.searchWeb();
+}
 
   searchWeb(){
-    this.service.loadAPI(this.ingredients);
-    this.recAPI=this.service.getAllAPI();
-  }
-  random(){
     this.service.loadAPI(this.ingredients);
     this.recAPI=this.service.getAllAPI();
   }
