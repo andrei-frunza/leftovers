@@ -16,6 +16,7 @@
         [formControl]="item"
         (submit)="add()"
         (keyup.enter)="add()"
+        (keyup.shift.enter)="add()"
         >
       </mat-form-field>
       <mat-chip-list>

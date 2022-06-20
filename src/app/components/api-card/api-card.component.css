@@ -17,3 +17,14 @@ mat-card-content{
 mat-card-title{
     margin:5px
 }
+@media all and (max-width:475px){
+    mat-card{
+        min-width:100vw;
+    }
+    mat-card-header{
+        max-width: 85vw;
+    }
+    mat-card-content{
+        max-width: 85vw;
+    }
+}
