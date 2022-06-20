@@ -8,3 +8,4 @@ The App was created using Angular Material.
 
 # See Website
 The website is hosted at https://leftovers-fb28e.web.app/
+![Alt text](ImgAssets/leftovers_large.jpgraw=true "Image of Website")
